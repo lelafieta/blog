@@ -37,11 +37,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Passo 2: Configurar o Java (Versão recomendada para Flutter)
-      - name: Setup Java
+      - name: Set up JDK 17
         uses: actions/setup-java@v2
         with:
-          java-version: '17'
+          java-version: 17
+          distribution: 'temurin' # Escolha entre 'temurin', 'zulu', etc.
+          java-package: jdk
+          architecture: x64
+          overwrite-settings: true
+
+      # Passo 2: Configurar o Java (Versão recomendada para Flutter)
+      # - name: Setup Java
+      #   uses: actions/setup-java@v2
+      #   with:
+      #     java-version: '17'
 
       # Passo 3: Configurar o Flutter SDK
       - name: Setup Flutter SDK

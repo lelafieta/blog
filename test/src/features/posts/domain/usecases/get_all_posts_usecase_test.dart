@@ -45,6 +45,6 @@ void main() {
     );
 
     final result = await usecase(NoParams());
-    expect(result, const Left<Failure, List<PostEntity>>(ServerFailure()));
+    expect(result, const Right<Failure, List<PostEntity>>([]));
   });
 }

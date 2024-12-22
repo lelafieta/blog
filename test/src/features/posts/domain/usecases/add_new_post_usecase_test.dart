@@ -23,7 +23,8 @@ void main() {
   test("Deve retorna true depois de cadastrar", () async {
     // when((repository.addNewPost()) async => const Right(true));
 
-    when(repository.addNewPost(post)).thenAnswer((_) async => Right(unit));
+    when(repository.addNewPost(post))
+        .thenAnswer((_) async => const Right(unit));
 
     final result = await useCase(post);
 

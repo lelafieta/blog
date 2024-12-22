@@ -40,7 +40,7 @@ jobs:
 
       # Passo 6: Fazer o upload do APK gerado (opcional)
       - name: Upload APK as an artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: release-apk
           path: build/app/outputs/flutter-apk/app-release.apk

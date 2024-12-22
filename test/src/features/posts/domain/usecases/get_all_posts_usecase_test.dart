@@ -41,10 +41,10 @@ void main() {
   test('It must return an error of posts in the LEFT of EITHER', () async {
     // Simula o retorno de erro
     when(mockRepository.getAllPosts()).thenAnswer(
-      (_) async => Left<Failure, List<PostEntity>>(ServerFailure()),
+      (_) async => const Left<Failure, List<PostEntity>>(ServerFailure()),
     );
 
     final result = await usecase(NoParams());
-    expect(result, Left<Failure, List<PostEntity>>(ServerFailure()));
+    expect(result, const Left<Failure, List<PostEntity>>(ServerFailure()));
   });
 }

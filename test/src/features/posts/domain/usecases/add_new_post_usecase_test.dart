@@ -1,4 +1,3 @@
-import 'package:blog/src/core/error/failure.dart';
 import 'package:blog/src/core/usecases/base_usecase.dart';
 import 'package:blog/src/features/posts/domain/entities/post_entity.dart';
 import 'package:blog/src/features/posts/domain/repositories/i_post_repository.dart';

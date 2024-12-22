@@ -2,8 +2,9 @@ name: CI/CD
 
 on:
   push:
-    tags:
-      - v*
+    branches:
+      - main
+      - develop
 
 
 jobs:

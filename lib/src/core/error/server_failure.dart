@@ -2,7 +2,7 @@ import 'package:blog/src/core/error/failure.dart';
 import 'package:dio/dio.dart';
 
 class ServerFailure extends Failure {
-  ServerFailure({super.errorMessage});
+  ServerFailure({super.errorMessage = "Ocorreu um erro no servidor."});
 
   factory ServerFailure.fromDioException(DioException dioException) {
     switch (dioException.type) {

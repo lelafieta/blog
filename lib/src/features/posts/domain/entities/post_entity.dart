@@ -1,4 +1,4 @@
-abstract class PostEntity {
+class PostEntity {
   String? id;
   String? title;
   String? body;
